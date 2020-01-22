@@ -10,7 +10,7 @@ def temperature():
     r = requests.get(
         'https://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',in&appid=ba7bb2fcd4d0e41b8155727a76289e9f')
     jsonobj = r.json()
-    z = jsonobj['main']['temp']
+
     temp_k = float(jsonobj['main']['temp'])
     temp_c = temp_k - 273.15
     temp_c = "{0:.2f}".format(temp_c)
